@@ -42,13 +42,13 @@ engines:
   variants: # Engine used for variants when no suitable special engine is configured.
     dir: "./engines" # Directory containing the engine.
     name: "fsf" # Binary name of the engine to use. (You need to download Fairy-Stockfish and place it in the engines directory)
-    ponder: true # Think on opponent's time.
+    ponder: false # Think on opponent's time.
     silence_stderr: false # Suppresses stderr output.
     move_overhead_multiplier: 1.0 # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options: # Arbitrary UCI options passed to the engine.
-      Threads: 8 # High thread count for variants.
-      Hash: 8192 # Large hash for variant calculations.
-      Move Overhead: 100 # Increase if your bot flags games too often.
+      Threads: 8 # Use 8 of 8 virtual cores for max power.
+      Hash: 12288 # 12 GB hash, safe within 15.6 GB RAM
+      Move Overhead: 100 # Small buffer to avoid flagging
       Use NNUE: true
       EvalFile: "3check-cb5f517c228b.nnue:antichess-dd3cbe53cd4e.nnue:atomic-2cf13ff256cc.nnue:crazyhouse-8ebf84784ad2.nnue:horde-28173ddccabe.nnue:kingofthehill-978b86d0e6a4.nnue:racingkings-636b95f085e3.nnue"
     limits: # Limits that end the move calculation early.
