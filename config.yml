@@ -92,7 +92,7 @@ gaviota:
 
 opening_books:
   enabled: true # Activate opening books.
-  priority: 400 # Priority with which this move source is used. Higher priority is used first.
+  priority: 1100 # Priority with which this move source is used. Higher priority is used first.
   read_learn: false # Whether to read the learn values from the books.
   books:
     #   bullet:
@@ -273,7 +273,7 @@ offer_draw:
   enabled: true # Activate whether the bot should offer draw.
   score: 10 # Tighter draw threshold - only accept truly equal positions.
   consecutive_moves: 5 # More moves required before considering draw.
-  min_game_length: 25 # Later draw offers to avoid early draws.
+  min_game_length: 31 # Later draw offers to avoid early draws.
   against_humans: false # Activate whether these settings should apply against humans.
   allow_in_tournaments: true # Allow offering draws in tournaments even for 0.5+0 games. By default, draws are never offered in 0.5+0 games.
   accept_30_second_draws: true
